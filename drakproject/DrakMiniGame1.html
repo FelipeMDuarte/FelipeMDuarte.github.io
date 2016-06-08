@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Drak Project</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		
+			<script type="text/javascript" src="wordfind.js" ></script>	
+		    <script>
+    
+      var words = ['aperfeicoamento','agilidade','competencia','crescimento','competitivo','contribuicao','confianca','compromisso',
+					'desenvolvimento','excelencia','experiencia','expectativas','global','garantia','inovacao','maximizacao','melhoria',
+					'padrao','qualidade','riqueza','reconhecimento','sociedade','seguranca','solucao','sustentavel','sustentabilidade',
+					'superacao','transparencia','originalidade','valor'];
+      localStorage.clear();
+      // create a new puzzle
+      var puzzle = wordfind.newPuzzle(words);
+	  puzzle.orientations = ["horizontal","vertical","diagonal"];
+      // print the puzzle to console
+      wordfind.print(puzzle);
+    
+    </script>
+		
+	</head>
+	
+	<body>
+			<header id="header">
+				<div class="innertube">
+					<img id="logo" src="draklogo.png" alt="DrakLogo" style="width:304px;height:94px;" >
+
+					
+				</div>
+			</header>
+		<div id="mainwrapper">
+			<div id="contentwrapper">
+				<div id="content">
+					<div class="innertube">
+						<h3>Ache as palavras que você poderá utilizar para formar a missão da empresa</h3>
+						<div id='puzzle'></div>
+			
+					</div>
+				</div>
+			</div>
+			
+					
+			
+			<nav id="leftmenu">
+				<div class="innertube">
+
+					<h5>Selecione a primeira letra e arraste o mouse ainda pressionado até a ultima para selecionar a palavra </h5>
+					<!--<h3> Palavras (Isso vai sair) </h3>-->
+						<!-- Guarda as palavras do caça palavras-->
+						<!--<div id='words'></div>-->
+				</div>
+			</nav>
+			
+			<nav id="rightmenu">
+				<div class="innertube">
+					<h3>Opções</h3>
+						<a>Agora que você achou as palavras, vamos elaborar as frases na próxima tela, <a href="escreverfrases.html" class="button">clique aqui </a> para começar.</a>
+				</div>
+			</nav>
+		</div>
+			<footer id="footer">
+				<div class="innertube">
+					<p>Drak Project</p>
+				</div>
+			</footer>
+	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="wordfind.js"></script> 
+		<script type="text/javascript" src="wordfindgame.js"></script> 
+		<script>
+		
+		  var words = ['aperfeicoamento','agilidade','competencia','crescimento','competitivo','contribuicao','confianca','compromisso',
+						'desenvolvimento','excelencia','experiencia','expectativas','global','garantia','inovacao','maximizacao','melhoria',
+						'padrao','qualidade','riqueza','reconhecimento','sociedade','seguranca','solucao','sustentavel','sustentabilidade',
+						'superacao','transparencia','originalidade','valor'];
+		
+		  // start a word find game
+		  
+		  var gamePuzzle = wordfindgame.create(words, '#puzzle', '#words');
+			
+		</script>
+	</body>
+
+</html>

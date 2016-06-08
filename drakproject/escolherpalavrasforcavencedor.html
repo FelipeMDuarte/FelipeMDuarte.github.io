@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Drak Project</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<script> 
+			localStorage.clear();
+		</script>
+		
+	</head>
+	
+	<body>
+			<header id="header">
+				<div class="innertube">
+					<img id="logo" src="draklogo.png" alt="DrakLogo" style="width:304px;height:94px;" >
+				</div>
+			</header>
+		<div id="mainwrapper">
+			<div id="contentwrapper">
+				<div id="content">
+					<div class="innertube">
+						<br />
+						Respeito<input id="checkbox" type="checkbox" name="fruit" value="respeito" /><br/>
+						Integridade<input id="checkbox" type="checkbox" name="fruit" value="integridade"/><br/>
+						Etica<input id="checkbox" type="checkbox" name="fruit" value="etica"/><br/>
+
+
+						Transparencia<input id="checkbox" type="checkbox" name="fruit" value="transparencia" /><br/>
+						Responsabilidade<input id="checkbox" type="checkbox" name="fruit" value="responsabilidade"/><br/>
+						Sustentabilidade<input id="checkbox" type="checkbox" name="fruit" value="sustentabilidade"/><br/>
+
+
+						Equipe<input id="checkbox" type="checkbox" name="fruit" value="equipe" /><br/>
+						Inovação<input id="checkbox" type="checkbox" name="fruit" value="inovacao"/><br/>
+						Humanismo<input id="checkbox" type="checkbox" name="fruit" value="humanismo"/><br/>
+						<br />
+						<!--<a href="escreverfrases.html" class="button" type="button" name="Ok" id="yes" onclick="checkboxes();">Ok</button>-->
+						<button type="button" onclick="checkboxes();">Ok</button>
+						<script>function checkboxes(){
+							//console.log(document.querySelectorAll('input[type="checkbox"]:checked').length);
+							var countSelect =document.querySelectorAll('input[type="checkbox"]:checked').length;
+							console.log(countSelect);
+							if (countSelect<3) {
+								alert("Voce selecionou menos de 3 opcoes");
+							}else if(countSelect==3){
+							
+								var inputElems = document.getElementsByTagName("input"),
+						   		count = 0;
+						   		for (var i=0; i<inputElems.length; i++) {
+						    		if (inputElems[i].type === "checkbox" && inputElems[i].checked !== true){
+						    		  	inputElems[i].disabled = true;
+						    	
+						    		}
+						    
+						   			if(inputElems[i].type === "checkbox" && inputElems[i].checked===true){
+						    			localStorage.setItem(i,inputElems[i].value);
+						    			//setCookie(i,inputElems[i].value);
+						    		}
+								}
+								location.href="escreverfrases2.html";
+							}else if(countSelect>3){
+								alert("Voce selecionou mais de 3 opcoes");
+							}
+							
+						}
+						</script>
+					</div>
+				</div>
+			</div>
+			
+					
+			
+			<nav id="leftmenu">
+				<div class="innertube">
+		
+				</div>
+			</nav>
+			
+			<nav id="rightmenu">
+				<div class="innertube">
+					
+				</div>
+			</nav>
+		</div>
+			<footer id="footer">
+				<div class="innertube">
+					<p>Drak Project</p>
+				</div>
+			</footer>
+	</body>
+
+</html>

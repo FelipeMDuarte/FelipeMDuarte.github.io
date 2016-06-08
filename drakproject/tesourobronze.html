@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Drak Project</title>
+						<link rel="stylesheet" type="text/css" href="estilo.css">
+		
+	</head>
+	
+	<body>
+			<header id="header">
+				<div class="innertube">
+					<img id="logo" src="draklogo.png" alt="DrakLogo" style="width:304px;height:94px;" >
+
+					
+				</div>
+			</header>
+		<div id="mainwrapper">
+			<div id="contentwrapper">
+				<div id="content">
+					<div class="innertube">
+						<h3>Você achou o tesouro de bronze! Agora você deve utilizar as palavras achadas na sua caça ao tesouro para formar a visão da empresa</h3>
+						<form>
+							Primeira Frase:<br>
+							<input size="100px" type="text" name="primeiraFrase"><br>
+							Segunda Frase:<br>
+							<input size="100px" type="text" name="segundaFrase"><br>
+							Terceira Frase:<br>
+							<input size="100px" type="text" name="terceiraFrase"><br>
+						</form>
+									
+					</div>
+				</div>
+			</div>
+						<nav id="leftmenu">
+				<div class="innertube">
+					<h3>Tesouro de bronze</h3>
+						<div id='wordsFound'></div>
+						<table border =0>
+							<tr><td>Responsabilidade</td><tr/>
+							<tr><td>Compromisso</td></tr>
+							<tr><td>Sustentabilidade</td></tr>
+						</table>
+				</div>
+			</nav>
+			<nav id="rightmenu">
+				<div class="innertube">
+					<h3>Opções</h3>
+						<a href="telafinalgame2.html" class="button"  onclick="anotarUltimoMiniGame()" >Enviar Frases</a>
+						<script>
+							function anotarUltimoMiniGame() { 
+							    localStorage.clear();
+							    localStorage.setItem(0,2);
+							}
+						</script>
+						<!--<script>
+						function popUp() {
+							window.alert("Suas frases foram enviadas para avaliação do administrador. Obrigado.");
+						}
+						</script>-->
+				</div>
+			</nav>
+					
+			
+		</div>
+			<footer id="footer">
+				<div class="innertube">
+					<p>Drak Project</p>
+				</div>
+			</footer>
+		<script>
+
+		</script>
+	</body>
+
+</html>

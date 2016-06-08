@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Drak Project</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<script> 
+			localStorage.clear();
+		</script>
+		
+	</head>
+	
+	<body>
+			<header id="header">
+				<div class="innertube">
+					<img id="logo" src="draklogo.png" alt="DrakLogo" style="width:304px;height:94px;" >
+				</div>
+			</header>
+		<div id="mainwrapper">
+			<div id="contentwrapper">
+				<div id="content">
+					<div class="innertube">
+						<br />
+						Apples<input id="checkbox" type="checkbox" name="fruit" value="apples" /><br/>
+						Oranges<input id="checkbox" type="checkbox" name="fruit" value="oranges"/><br/>
+						Mango<input id="checkbox" type="checkbox" name="fruit" value="mango"/><br/>
+						<br />
+						<!--<a href="escreverfrases.html" class="button" type="button" name="Ok" id="yes" onclick="checkboxes();">Ok</button>-->
+						<button type="button" onclick="checkboxes();">Ok</button>
+						<script>function checkboxes(){
+						//console.log(document.querySelectorAll('input[type="checkbox"]:checked').length);
+						if(document.querySelectorAll('input[type="checkbox"]:checked').length==2){
+							
+							var inputElems = document.getElementsByTagName("input"),
+						    count = 0;
+						    for (var i=0; i<inputElems.length; i++) {
+						    if (inputElems[i].type === "checkbox" && inputElems[i].checked !== true){
+						      	inputElems[i].disabled = true;
+						    	
+						    	}
+						    
+						    if(inputElems[i].type === "checkbox" && inputElems[i].checked===true){
+						    	localStorage.setItem(i,inputElems[i].value);
+						    	//setCookie(i,inputElems[i].value);
+						    }
+						}
+						}
+						location.href="escreverfrases.html";
+					}
+						</script>
+					</div>
+				</div>
+			</div>
+			
+					
+			
+			<nav id="leftmenu">
+				<div class="innertube">
+		
+				</div>
+			</nav>
+			
+			<nav id="rightmenu">
+				<div class="innertube">
+					
+				</div>
+			</nav>
+		</div>
+			<footer id="footer">
+				<div class="innertube">
+					<p>Drak Project</p>
+				</div>
+			</footer>
+	</body>
+
+</html>
