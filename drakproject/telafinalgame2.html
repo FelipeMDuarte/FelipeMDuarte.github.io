@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Drak Project</title>
 				<link rel="stylesheet" type="text/css" href="estilo.css">
-		
+		<script type="text/javascript">localStorage.getItem('played')</script>
 	</head>
 	
 	<body>
@@ -20,7 +20,7 @@
 				<div id="content">
 					<div class="innertube">
 						<form>
-							<h2> Você acabou a segunda parte do jogo. As Visões feitas por voce e pelos outros vikings serão votadas e no final você vera seu score. Agora vamos para as Crenças e Valores! Boa sorte!</h2>
+							<h2> Você acabou mais uma parte do jogo. As escolhas feitas por voce e pelos outros vikings serão votadas e no final você vera seu score. Boa Sorte!</h2>
 						</form>
 									
 					</div>
@@ -33,7 +33,51 @@
 			</nav>
 			<nav id="rightmenu">
 				<div class="innertube">
-												<a href="telainiciogame3.html" class="button" >Passar para a próxima fase</a>
+					<!--<a href="telainiciogame3.html" class="button" >Passar para a próxima fase</a>-->
+						<input type="button" value="Passar para a próxima fase" onClick="pickLevel();">	
+						 <script type="text/javascript">
+						      function pickLevel(){
+						      	
+						      	var played = localStorage.getItem('played');
+						      	if(played == '2'){
+						      		var y = Math.round(Math.random()*2);
+						      		if(y==1){
+						      			window.location="telainiciogame1.html";
+							      		localStorage.setItem('played','12');
+							      		localStorage.getItem('played')	
+						      		}else if(y==2){
+						      			window.location="telainiciogame3.html";
+						      			localStorage.setItem('played','23');
+						      			localStorage.getItem('played')
+						      		}
+						      		
+						      	}else if(played == '12'){
+						      		window.location="telainiciogame3.html";
+						      		localStorage.setItem('played','123');
+						      		localStorage.getItem('played')
+						      	}else if(played == '23'){
+						      		window.location="telainiciogame1.html";
+						      		localStorage.setItem('played','123');
+						      		localStorage.getItem('played')
+						      	}else if(played=='123'){
+						      		window.location="telafinal.html";
+						      	}
+						      }
+						      	/*var x=Math.round(Math.random()*3);
+						      	if(x==1){
+						      		window.location= "telainiciogame1.html";
+						      		localStorage.setItem('played','1');
+						      	}
+						      	if(x==2){
+						      		window.location= "telainiciogame2.html";
+							      	localStorage.setItem('played','2');
+						      	}
+						      	if(x==3){
+						      		window.location= "telainiciogame3.html";
+						      		localStorage.setItem('played','3');
+						      	}
+						      }*/
+						      </script>
 				</div>
 			</nav>
 					

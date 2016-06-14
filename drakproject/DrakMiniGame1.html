@@ -5,14 +5,14 @@
 		<title>Drak Project</title>
 		<link rel="stylesheet" type="text/css" href="estilo.css">
 		
-			<script type="text/javascript" src="wordfind.js" ></script>	
-		    <script>
+			<script type="text/javascript" src="wordfind.js" >
+			localStorage.getItem('played')
     
       var words = ['aperfeicoamento','agilidade','competencia','crescimento','competitivo','contribuicao','confianca','compromisso',
 					'desenvolvimento','excelencia','experiencia','expectativas','global','garantia','inovacao','maximizacao','melhoria',
 					'padrao','qualidade','riqueza','reconhecimento','sociedade','seguranca','solucao','sustentavel','sustentabilidade',
 					'superacao','transparencia','originalidade','valor'];
-      localStorage.clear();
+      //localStorage.clear();
       // create a new puzzle
       var puzzle = wordfind.newPuzzle(words);
 	  puzzle.orientations = ["horizontal","vertical","diagonal"];

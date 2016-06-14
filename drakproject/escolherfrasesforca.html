@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Drak Project</title>
 		<link rel="stylesheet" type="text/css" href="estilo.css">
-		
+		<script type="text/javascript">localStorage.getItem('played')</script>
 	</head>
 	
 	<body>
@@ -55,12 +55,7 @@
 				<div class="innertube">
 					<h3>Opções</h3>
 						<a href="telafinalgame3.html" class="button" onclick="anotarUltimoMiniGame()" >Enviar Frases</a>
-						<script>
-							function anotarUltimoMiniGame() { 
-							    localStorage.clear();
-							    localStorage.setItem(0,1);
-							}
-						</script>
+		
 						<!--<script>
 						function popUp() {
 							window.alert("Suas frases foram enviadas para avaliação do administrador. Obrigado.");

@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Drak Project</title>
 		<link rel="stylesheet" type="text/css" href="estilo.css">
-	
+		<script type="text/javascript">localStorage.getItem('played')</script>
 		
 	</head>
 	
@@ -21,7 +21,8 @@
 					<div class="innertube">
 						    <div class="login">
 						      <h1>Login</h1>
-						      <form id="mudar" action="telainiciogame1.html">
+						      <!--action="telainiciogame1.html"   action="javascript:;" oncreate="pickLevel()"-->
+						      <form>
 						        <p><input type="text" name="login" value="" placeholder="Usuário or Email"></p>
 						        <p><input type="password" name="password" value="" placeholder="Senha"></p>
 						        <p class="remember_me">
@@ -30,9 +31,29 @@
 						            Remember me on this computer
 						          </label>
 						        </p>
-						        <p class="submit"><input id="buttonLogin" type="submit" name="commit" value="Login"  href ="telainiciogame1.html"></p>
+						        <p class="submit"><input id="buttonLogin" type="button" name="commit" value="Login" onClick="pickLevel();"></p>
 						        <!--oncreate="checaUltimoMinigame()"-->
 						      </form>
+						      <script type="text/javascript">
+						      function pickLevel(){
+						      	x=Math.round(Math.random()*3);
+						      	if(x==1){
+						      		window.location= "telainiciogame1.html";
+						      		localStorage.setItem('played','1');
+						      		localStorage.getItem('played')
+						      	}
+						      	if(x==2){
+						      		window.location= "telainiciogame2.html";
+							      	localStorage.setItem('played','2');
+							      	localStorage.getItem('played')
+						      	}
+						      	if(x==3){
+						      		window.location= "telainiciogame3.html";
+						      		localStorage.setItem('played','3');
+						      		localStorage.getItem('played')
+						      	}
+						      }
+						      </script>
 						    </div>
 					</div>
 				</div>
