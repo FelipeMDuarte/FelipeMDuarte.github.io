@@ -19,27 +19,29 @@
 			<div id="contentwrapper">
 				<div id="content">
 					<div class="innertube">
-						    <div class="login">
-						      <h1>Login</h1>
-						      <!--action="telainiciogame1.html"   action="javascript:;" oncreate="pickLevel()"-->
-						      <form>
-						        <p><input type="text" name="login" value="" placeholder="Usuário or Email"></p>
-						        <p><input type="password" name="password" value="" placeholder="Senha"></p>
-						        <p class="remember_me">
-						          <label>
-						            <input type="checkbox" name="remember_me" id="remember_me">
-						            Remember me on this computer
-						          </label>
-						        </p>
-						        <p class="submit"><input id="buttonLogin" type="button" name="commit" value="Login" onClick="pickLevel();"></p>
-						        <!--oncreate="checaUltimoMinigame()"-->
-						      </form>
-						      <script type="text/javascript">
-						      function pickLevel(){
-						      	window.location="welcome.html";
-						      }
+						   
+						      <p id="textIntro">Você chegou ao seu primeiro destino. Para conquistar este continente será necessário passar por três provações que envolvem descobrir ou achar as palavras que você utilizará na análise estratégica. Boa sorte, quando estiver pronto para começar clique em continuar.</p>
+						     
+					
+						    <img id="logo" src="viking.png" alt="viking" style="width:335px;height:289px;"> 
+					</div>
+				</div>
+			</div>
+
+					
+			
+			<nav id="leftmenu">
+				<div class="innertube">
+		
+				</div>
+			</nav>
+			
+			<nav id="rightmenu">
+				<div class="innertube">
+							 	 <p class="submit"><input type="button" name="commit" value="Continuar" onClick="pickLevel();"></p>
+
 						      </script>
-						      <!--<script type="text/javascript">
+						      <script type="text/javascript">
 						      function pickLevel(){
 						      	x=Math.round(Math.random()*3);
 						      	if(x==1){
@@ -58,23 +60,7 @@
 						      		localStorage.getItem('played')
 						      	}
 						      }
-						      </script>-->
-						    </div>
-					</div>
-				</div>
-			</div>
-
-					
-			
-			<nav id="leftmenu">
-				<div class="innertube">
-		
-				</div>
-			</nav>
-			
-			<nav id="rightmenu">
-				<div class="innertube">
-					
+						      </script>
 				</div>
 			</nav>
 		</div>
@@ -86,3 +72,4 @@
 	</body>
 
 </html>
+
